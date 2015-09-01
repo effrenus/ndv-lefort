@@ -12,10 +12,10 @@ gulp.task('default', () => {
 });
 
 gulp.task('build', ['del'], () => {
-	gulp.start(
+	runSequence(
+		'spritesmith',
 		'styles',
 		'jade',
-		'scripts'
-		// 'copy'
+		'copy:images',
 	);
 });

@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:effrenus/ndv-lefort.git
+	branch = gh-pages
