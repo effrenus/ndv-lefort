@@ -1,0 +1,31 @@
+body
+	font-family: $font-family
+	background: #F7F4E8
+	color: $text-color
+
+a
+	color: $link-color
+
+h1
+	margin-bottom: 0.7em
+	font-size: 1.5rem
+	color: $purple-color
+
+p
+	margin-bottom: 1em
+	line-height: 1.45
+
+em
+	color: $purple-color
+
+.flex-row
+	display: flex
+
+$cols: 12
+@for $i from 1 through $cols
+	.col-#{$i}of#{$cols}
+		width: 100% / $cols * $i;
+
+.wrap
+	max-width: 1200px
+	margin: 0 auto

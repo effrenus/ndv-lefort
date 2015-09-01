@@ -1,0 +1,111 @@
+extends ./layouts/default
+
+block head
+	- pageTitle = 'Жилой комплекс Лефортово'
+
+block content
+	.page
+		header.head
+			.head__info
+				.wrap
+					.head__logo Жилой комплекс Лефорт
+					.head__address Москва, пер. Солдатский, д. 26
+					a(href='/').head__map-link Как проехать
+
+					a(href='/').head__request-button Оставить заявку
+					.head__phone +7(495) 988-44-22
+					a(href='/').head__contact-logo
+
+			.nav-wrap.nav-wrap_purple
+				nav.primary-nav.wrap
+					.primary-nav__item О комплексе
+					.primary-nav__item Расположение
+					.primary-nav__item В наличии
+					.primary-nav__item Планировки
+					.primary-nav__item Ипотека
+					.primary-nav__item Контакты
+
+		section.information
+			.information__wrap
+				h1.information__title Квартиры в историческом центре <span>от <b>139 000</b> руб./м²</span>
+
+				.price-block.information__price
+					.price-block__label Повышение цен
+					.price-block__date <b>12</b> ноября
+
+				.cam-block.information__cam
+					a(href='/').cam-block__link Веб-камера на объекте
+
+				.news-block
+					.news-block__head
+						a(href='/') Новости
+					ul.news-block__list
+						.news-block__item.is-active
+							.news-block__date 17/10/14
+							.news-block__title
+								a(href='/') ЖК Лефорт новая история Москвы
+							.news-block__text.
+								Люди активно продают свои квартиры на вторичном рынке
+
+				.merit
+					.merit__item.i-metro
+						a(href='/') Открытие станции метро Лефортово
+					.merit__item.i-district
+						a(href='/') Престижный район Москвы
+					.merit__item.i-park
+						a(href='/') Близость к парку Лефортово и набережной реки Яуза
+					.merit__item.i-apartment
+						a(href='/') Квартиры в наличии<br> от 38 до 120 м²
+					.merit__item.i-infrastructure
+						a(href='/') Сложившаяся инфраструктура столичного района
+					.merit__item.i-parking
+						a(href='/') Двухуровневая подземная автостоянка
+					.merit__item.i-education
+						a(href='/') Комплекс внеклассного образования
+
+		.nav-wrap.nav-wrap_purple.nav-wrap_border
+			nav.secondary-nav.wrap
+				.secondary-nav__item
+					a(href='/') Ход строительства
+				.secondary-nav__item
+					a(href='/') Новости
+				.secondary-nav__item
+					a(href='/') Взаимозачет
+				.secondary-nav__item
+					a(href='/') Машиноместа
+				.secondary-nav__item
+					a(href='/') Документы
+				.secondary-nav__item
+					a(href='/') Нежилые помещения
+				.secondary-nav__item
+					a(href='/') Участники
+
+		section.wrap
+			h1 Жилой комплекс «Лефорт»
+			p
+				em «НДВ-Недвижимость» представляет новый проект «Лефорт» в одном из старейших исторических районов Москвы, который отличается прекрасной сложившейся инфраструктурой и удобной транспортной системой.
+			p.
+				Новый комплекс состоит из двух корпусов, каждый - по 17 этажей. Эти здание созданы по оригинальному проекту одного из лучших столичных архитектурных бюро, специалисты которого проектировали знаменитые сталинские высотки. Исторический монументализм XXI века вышел на совершенно другой уровень. Прочные стены и плавные изгибы зданий создают неповторимый облик нового города. Дома, созданные в лучших традициях русской архитектурной школы, разработаны с учетом современных технологий и самых актуальных урбанистических тенденций
+
+		footer.footer
+			.wrap.flex-row
+				.col-2of12
+					a(href='/') НДВ Недвижимость
+					b.tel +7(495) 988-44-22
+				.col-2of12
+					| Центральный офис:
+					span.address м. Трубная, Трубная пл., д. 2
+				.col-1of12
+					a(href='/') Офисы НДВ
+				.col-6of12
+					.support-companies
+						.support-companies__item
+							img(src='./images/foot-ndv-logo.png' alt='НДВ')
+							a(href='/') Эксклюзивный<br> продавец
+						.support-companies__item
+							img(src='./images/foot-inter-logo.png' alt='')
+							a(href='/') Застройщик
+						.support-companies__item
+							img(src='./images/foot-proj-logo.png' alt='')
+							a(href='/') Проектировщик
+

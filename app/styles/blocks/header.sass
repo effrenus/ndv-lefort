@@ -1,0 +1,94 @@
+$head-info-height: 61px
+
+.head
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	z-index: 2
+
+	&__logo
+		position: absolute
+		left: 50%
+		top: 0
+		transform: translate(-50%)
+		@include sprite($logo)
+		text-indent: -1000em
+		outline: none
+
+	&__info
+		position: relative
+		height: $head-info-height
+		padding-top: 20px
+		box-sizing: border-box
+		background: url('../images/lines-bg.png'), linear-gradient(to bottom, #E3E0D5, #E8E6DC)
+
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			width: calc(50% - #{$logo-width / 2})
+			height: 7px
+			background-color: green
+			font-size: 0
+			line-height: 0
+
+		&::before
+			left: 0
+			background: linear-gradient(to right, #C1BDAB, #F1EDDC)
+
+		&::after
+			right: 0
+			background: linear-gradient(to left, #D0CDBB, #C0BCAB 70%, #E6E2D0 91%, #F1EDDC)
+
+	&__address,
+	&__map-link
+		float: left
+
+	&__contact-logo,
+	&__phone,
+	&__request-button
+		float: right
+
+	&__address
+		margin-right: 50px
+
+	&__map-link
+		position: relative
+		padding-left: 40px
+
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: -10px
+			@include sprite($geo-point)
+
+	&__contact-logo
+		position: relative
+		top: -5px
+		margin-right: 30px
+		@include sprite($ndv-logo)
+
+	&__phone
+		margin-right: 30px
+		font-size: 1.3rem
+		font-weight: bold
+
+	&__request-button
+		position: relative
+		top: -7px
+		height: 30px
+		padding: 0 10px
+		line-height: 30px
+		border: 3px solid #895996
+		text-decoration: none
+		color: #520676
+		transition-property: border-color, color
+		transition-duration: 0.4s
+
+		&:hover
+			color: darken(#520676, 30%)
+			border-color: lighten(#895996, 20%)

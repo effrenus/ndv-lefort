@@ -1,0 +1,176 @@
+.information
+	background: #B7D5ED url(../images/bcg.jpg) 50% 0 no-repeat
+
+	&__wrap
+		@extend .wrap
+		position: relative
+		height: 700px
+		box-sizing: border-box
+
+	&__price
+		position: absolute
+		left: 0
+		top: 210px
+
+	&__cam
+		position: absolute
+		left: 25px
+		top: 330px
+
+	&__title
+		position: absolute
+		left: 0
+		top: 120px
+		font-family: Georgia, serif
+		font-size: 1.7rem
+		line-height: 1.4
+
+		span
+			display: block
+			font-size: 0.7em
+
+		b
+			font-size: 1.8rem
+			font-weight: 700
+
+.price-block
+	width: 250px
+	height: 91px
+	padding-top: 20px
+	box-sizing: border-box
+	border-style: solid
+	border-width: 8px 36px 8px 35px
+	border-image: url('../images/block-bg-short.png') 8 36 8 35 fill round stretch
+	color: #FFF
+
+	&__label
+		display: inline-block
+		width: 100px
+		margin-left: -10px
+		text-align: center
+		vertical-align: middle
+
+	&__date
+		display: inline-block
+		margin-right: -10px
+		vertical-align: middle
+
+		b
+			display: inline-block
+			font-size: 2.3rem
+			vertical-align: middle
+
+.cam-block
+	width: 200px
+	height: 91px
+	padding: 20px 0 0 35px
+	box-sizing: border-box
+	border-style: solid
+	border-width: 8px 36px 8px 35px
+	border-image: url('../images/block-bg-short.png') 8 36 8 35 fill round stretch
+
+	&::before
+		content: ''
+		position: absolute
+		left: 0px
+		top: 20px
+		@include sprite($camera)
+
+	&__link
+		margin-right: -10px
+		color: #FFF
+
+.news-block
+	position: absolute
+	left: -10px
+	bottom: 25px
+	width: 250px
+	height: 200px
+	padding: 35px 10px 0 15px
+	box-sizing: border-box
+	background-color: #783292
+	border: 10px solid green
+	border-image: linear-gradient(to bottom, #F7F4E7, #F7F4E7 15%, #B9B6AA 40%, #F7F4E8 80%, #EAE8DB) 14% stretch
+	color: #FFF
+
+	&__head
+		@include sprite($news-head)
+		position: absolute
+		left: 50%
+		top: -19px
+		padding-top: 15px
+		transform: translate(-50%)
+		text-align: center
+		box-sizing: border-box
+
+		a
+			color: #744481
+			text-transform: uppercase
+
+	&__date
+		text-align: center
+		font-size: 0.85rem
+
+	&__title
+		margin-bottom: 0.5em
+
+		a
+			color: #FFF
+
+	&__text
+		font-size: 0.85rem
+
+.merit
+	position: absolute
+	right: -10px
+	bottom: 20px
+	width: 299px
+	height: 557px
+	padding: 15px 10px 0px 50px
+	box-sizing: border-box
+	background: url('../images/advantage-bg.png') 0 0 no-repeat
+
+	&__item
+		position: relative
+		min-height: 64px
+		margin-bottom: 13px
+		padding-left: 75px
+		vertical-align: middle
+		line-height: 64px
+		font-size: 0.9rem
+
+		&:last-child
+			margin-bottom: 0
+
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+
+		&.i-metro::after
+			@include sprite($ico-metro)
+
+		&.i-district::after
+			@include sprite($ico-district)
+
+		&.i-park::after
+			@include sprite($ico-park)
+
+		&.i-apartment::after
+			@include sprite($ico-apartment)
+
+		&.i-infrastructure::after
+			@include sprite($ico-infrastructure)
+
+		&.i-parking::after
+			@include sprite($ico-parking)
+
+		&.i-education::after
+			@include sprite($ico-education)
+
+		a
+			display: inline-block
+			vertical-align: middle
+			line-height: 1.25
+			text-decoration: none
