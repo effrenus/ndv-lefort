@@ -1,11 +1,6 @@
-import React from 'react';
+import Rotator from './Rotator';
 
-class Example extends React.Component {
-	render() {
-		return <b>This is example!!!!!</b>;
-	}
-}
-
-React.render(
-	<Example />,
-	document.getElementById('app'));
+const newsRotator = new Rotator({
+	parentSelector: '.news-block',
+	itemsSelector: '.news-block__item',
+});
